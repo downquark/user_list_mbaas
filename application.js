@@ -3,7 +3,7 @@ var mbaasApi = require('fh-mbaas-api');
 var express = require('express');
 var mbaasExpress = mbaasApi.mbaasExpress();
 var cors = require('cors');
-//var log = require('fh-bunyan');
+var log = require('fh-bunyan').getLogger(__filename);
 
 // list the endpoints which you want to make securable here
 var securableEndpoints;
@@ -33,5 +33,5 @@ app.use(mbaasExpress.errorHandler());
 var port = process.env.FH_PORT || process.env.OPENSHIFT_NODEJS_PORT || 8001;
 var host = process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 app.listen(port, host, function() {
-  console.log('App started at: ' + new Date() + ' on port: ' + port);
+    log.info('App started at: ' + new Date() + ' on port: ' + port);
 });
