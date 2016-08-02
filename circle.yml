@@ -27,4 +27,4 @@ deployment:
      - git fetch --unshallow
      - git push $FH_GIT_URL $CIRCLE_SHA1:refs/heads/dev
      - fhc git pull $FH_CLOUD_APP_ID
-     - fhc app stage --app=$FH_CLOUD_APP_ID --env=rh-dev --runtime=node010 --clean=true --gitRef.type=branch --gitRef.hash=HEAD --gitRef.value=dev
+     - fhc app stage --app=$FH_CLOUD_APP_ID --env=rht-dev --runtime=node010 --clean=true --gitRef.type=branch --gitRef.hash=HEAD --gitRef.value=dev
