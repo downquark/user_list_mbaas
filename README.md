@@ -1,6 +1,6 @@
 # FeedHenry Hello World MBaaS Server
 
-This is a blank 'hello world' FeedHenry MBaaS. Use it as a starting point for building your APIs. 
+This is a blank 'hello world' FeedHenry MBaaS. Use it as a starting point for building your APIs.
 
 # Group Hello World API
 
@@ -8,7 +8,7 @@ This is a blank 'hello world' FeedHenry MBaaS. Use it as a starting point for bu
 
 'Hello world' endpoint.
 
-## hello [POST] 
+## hello [POST]
 
 'Hello world' endpoint.
 
@@ -22,4 +22,26 @@ This is a blank 'hello world' FeedHenry MBaaS. Use it as a starting point for bu
     + Body
             {
               "msg": "Hello world"
+            }
+
+# users [/users]
+
+'Hello world' endpoint.
+
+## users [POST]
+
+'Hello world' endpoint.
+
++ Request (application/json)
+    + Body
+            {
+              "firstname": "hello",
+              "lastname": "world"
+            }
+
++ Response 200 (application/json)
+    + Body
+            {
+              "firstname": "hello",
+              "lastname": "world"
             }
